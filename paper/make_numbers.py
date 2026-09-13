@@ -1,4 +1,4 @@
-"""Generate numbers.tex / numbers.json for the redo paper from redo/results only."""
+"""Generate numbers.tex / numbers.json for the paper from results/ only."""
 import json
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,7 +34,7 @@ trio("ErjSegRhy", s3["primary_H4_seg_minus_rhythm"]["delta"], s3["primary_H4_seg
 put("ErjSpkR", s3["speaker_level_segmental_r"], ".3f")
 put("EpaN", s4["n"], ",d"); put("EpaSpk", s4["speakers"], "d"); trio("Epa", s4["primary_H1_panel_r"]["r"], s4["primary_H1_panel_r"]["ci95"], ".3f")
 trio("EpaDelta", s4["panel_minus_hubert"]["delta"], s4["panel_minus_hubert"]["delta_ci95"], "+.3f"); put("EpaHubert", s4["panel_minus_hubert"]["r_b"], ".3f"); put("EpaSpkR", s4["speaker_level_r"], ".3f")
-put("AllTalkers", s5["talkers"], "d"); put("AllUtt", s5["utterances"], ",d"); trio("All", s5["primary_H5_panel_r"]["r"], s5["primary_H5_panel_r"]["ci95"], ".3f")
+put("AllTalkers", s5["talkers"], "d"); put("AllUttPer", s5["utterances"] // s5["talkers"], "d"); put("AllUtt", s5["utterances"], ",d"); trio("All", s5["primary_H5_panel_r"]["r"], s5["primary_H5_panel_r"]["ci95"], ".3f")
 trio("AllDelta", s5["panel_minus_hubert"]["delta"], s5["panel_minus_hubert"]["delta_ci95"], "+.3f"); put("AllHubert", s5["panel_minus_hubert"]["r_b"], ".3f")
 trio("AllWhisDelta", s5["panel_minus_whisper7"]["delta"], s5["panel_minus_whisper7"]["delta_ci95"], "+.3f"); put("AllWhis", s5["panel_minus_whisper7"]["r_b"], ".3f")
 put("OmN", s6["n"], ",d"); put("OmSpk", s6["speakers"], "d"); put("OmListeners", len(s6["listeners"]), "d")
@@ -49,6 +49,18 @@ for n, v in dev["per_listener"].items():
 emp = dev["per_listener"]; put("MoonEmpty", 100 * emp["moonshine-base"]["empty"] / dev["n_utterances"], ".1f")
 hum = json.loads((ROOT / "results/human_agreement_test.json").read_text())
 put("HumPair", hum["accuracy"]["mean_pairwise_r"], ".3f"); put("HumRest", hum["accuracy"]["mean_rater_vs_rest_r"], ".3f")
+# Published comparison values (documentary, not reproduced here): GOPT accuracy PCC as reported in the
+# HMamba paper's Table 1 (0.714); HMamba Table 1 (0.807); transcript-guided DTW distance, sign-reversed
+# (0.633, arXiv:2606.19910 Table 2); TextPA Gemini-2.0-flash (0.532).
+put("PubGopt", 0.714, ".3f"); put("PubHmamba", 0.807, ".3f"); put("PubDtw", 0.633, ".3f"); put("PubTextpa", 0.532, ".3f")
+rob = json.loads((ROOT / "results/robustness.json").read_text())
+for corpus, pre in (("so762_test", "RobSo"), ("allsstar", "RobAll")):
+    for key, suf in (("no_phone_recognizers", "NoPhone"), ("family_balanced", "FamBal")):
+        v = rob[corpus][key]; put(pre + suf, v["r_a"], ".3f"); trio(pre + suf + "Delta", v["delta"], v["delta_ci95"], "+.3f")
+put("RobFamilies", rob["so762_test"]["n_families"], "d")
+pc = json.loads((ROOT / "results/partial_correlations.json").read_text())
+for a, n in (("fluency", "PartFlu"), ("prosodic", "PartPros"), ("total", "PartTotal")):
+    v = pc["controlling_accuracy"][a]; trio(n, v["partial_r"], v["ci95"], ".3f")
 tex = "\\newcommand{\\N}[1]{\\csname N#1\\endcsname}\n" + "".join(f"\\expandafter\\def\\csname N{k}\\endcsname{{{v.replace(',', '{,}')}}}\n" for k, v in M.items())
 (ROOT / "paper/numbers.tex").write_text(tex); (ROOT / "paper/numbers.json").write_text(json.dumps(M, indent=2) + "\n")
 print(len(M), "macros")

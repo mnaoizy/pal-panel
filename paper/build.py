@@ -1,4 +1,4 @@
-"""Clean-build the redo paper; fail on overfull boxes or unresolved references."""
+"""Clean-build the paper; fail on overfull boxes or unresolved references."""
 from pathlib import Path
 import shutil, subprocess
 ROOT = Path(__file__).resolve().parent
@@ -13,4 +13,4 @@ latex = ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "-output-dire
 run(latex); run(["bibtex", "build/main"]); run(latex); log = run(latex)
 bad = [l for l in log.splitlines() if "Overfull" in l or ("LaTeX Warning:" in l and ("undefined" in l or "changed" in l))]
 if bad: raise SystemExit("\n".join(bad))
-(ROOT / "output").mkdir(exist_ok=True); shutil.copy2(BUILD / "main.pdf", ROOT / "output/pal_redo.pdf"); print("built", ROOT / "output/pal_redo.pdf")
+(ROOT / "output").mkdir(exist_ok=True); shutil.copy2(BUILD / "main.pdf", ROOT / "output/pal_icassp2027.pdf"); print("built", ROOT / "output/pal_icassp2027.pdf")

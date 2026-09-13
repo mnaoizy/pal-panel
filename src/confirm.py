@@ -36,6 +36,7 @@ def score_corpus(corpus: str, ids: list[str], texts: list[str]) -> tuple[pd.Data
         cols[c] = [error_rate(refs_i[u], tuple(hyps[u].split())) if name in PHONE else error_rate(refs_a[u], arpabet(hyps[u])) for u in ids]
     E = pd.DataFrame(cols, index=ids)
     assert sorted(E.columns) == sorted(DEV["panel"]), (corpus, set(E.columns) ^ set(DEV["panel"]))
+    E.to_csv(REDO / f"results/errors_{corpus}.csv", index_label="utt_id")
     return E, empties
 
 
@@ -48,7 +49,7 @@ def stage2():
     test = man[man.split == "test"].reset_index(drop=True); assert len(test) == 2500
     test["spk"] = test.wav.str.extract(r"(SPEAKER\d+)")
     E, empties = score_corpus("so762", test.utt_id.tolist(), test.text.tolist())
-    E.to_csv(REDO / "results/stage2_test_error_rates.csv", index_label="utt_id")
+    (REDO / "results/errors_so762.csv").rename(REDO / "results/errors_so762_test.csv")
     Y = {a: test[a].to_numpy(float) for a in ["accuracy", "completeness", "fluency", "prosodic", "total"]}
     S = cluster_resamples(test.spk.to_numpy()); p = panel(E); y = Y["accuracy"]
     out = {"data": "SO762 test", "n": len(test), "speakers": int(test.spk.nunique()), "empty": empties,
@@ -163,6 +164,7 @@ def stage6():
     keep = ~np.isnan(tone_t) & ~np.isnan(cons_t); utts = [u for u, k in zip(utts, keep) if k]; tone_t, cons_t = tone_t[keep], cons_t[keep]
     refs = {u: syls(human[u]["text"]) for u in utts}
     re_ = re_[re_.utt_id.isin(utts)].copy(); re_["mt"] = [matched_tone(refs[u], syls(h)) for u, h in zip(re_.utt_id, re_.hyp)]
+    re_[["utt_id", "tier", "cer", "segER", "toneER", "mt"]].to_csv(REDO / "results/errors_ompal.csv", index=False)
     agg = re_.groupby("utt_id").agg(cer=("cer", "mean"), segER=("segER", "mean"), toneER=("toneER", "mean"), mt=("mt", "mean")).loc[utts]
     spk = np.array([speaker_of[u] for u in utts]); S = cluster_resamples(spk)
     tone = -agg.toneER.to_numpy(); base = -agg.segER.to_numpy(); char = -agg.cer.to_numpy(); mt = -agg.mt.to_numpy(); ok = np.isfinite(mt)

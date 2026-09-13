@@ -1,0 +1,48 @@
+{
+  "status": "post-hoc robustness, computed after the pre-registered analyses at a reviewer's request",
+  "so762_test": {
+    "no_phone_recognizers": {
+      "r_a": 0.6694698486012232,
+      "r_b": 0.6705794042584197,
+      "delta": -0.0011095556571965037,
+      "delta_ci95": [
+        -0.0031722059030625943,
+        0.0009408967355711836
+      ],
+      "p_delta_positive": 0.1495
+    },
+    "family_balanced": {
+      "r_a": 0.6709049469254554,
+      "r_b": 0.6705794042584197,
+      "delta": 0.00032554266703577195,
+      "delta_ci95": [
+        -0.0049755726849568995,
+        0.005430562439497675
+      ],
+      "p_delta_positive": 0.547
+    },
+    "n_families": 10
+  },
+  "allsstar": {
+    "no_phone_recognizers": {
+      "r_a": 0.5722153480076175,
+      "r_b": 0.575572543402624,
+      "delta": -0.0033571953950064515,
+      "delta_ci95": [
+        -0.011625905991156343,
+        0.005591695971954442
+      ],
+      "p_delta_positive": 0.233
+    },
+    "family_balanced": {
+      "r_a": 0.5700539350285402,
+      "r_b": 0.575572543402624,
+      "delta": -0.0055186083740838,
+      "delta_ci95": [
+        -0.025157941731277045,
+        0.01384397726779678
+      ],
+      "p_delta_positive": 0.279
+    }
+  }
+}

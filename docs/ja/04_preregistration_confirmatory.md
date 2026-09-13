@@ -27,4 +27,4 @@
 
 ## 記録欄（開封後に追記）
 
-（`07_confirmatory_report.md` に各段階の結果と判定を記録する。）
+（各段階の結果と判定は `../confirmatory-record.md` に記録した。）

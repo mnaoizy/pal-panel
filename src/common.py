@@ -1,4 +1,4 @@
-"""Minimal, self-contained readout and statistics for the redo. No import from gop/src."""
+"""Minimal, self-contained readout and statistics: normalization, G2P, edit distance, speaker-clustered bootstrap."""
 from __future__ import annotations
 import json, os, re, string
 from functools import lru_cache

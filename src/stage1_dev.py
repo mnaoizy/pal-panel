@@ -35,7 +35,7 @@ def main():
             matrix[name] = [error_rate(refs_arpa[u], arpabet(hyps[u])) for u in ids]
         print("scored", name, flush=True)
     E = pd.DataFrame(matrix, index=ids)
-    E.to_csv(REDO / "results/stage1_train_error_rates.csv", index_label="utt_id")
+    E.to_csv(REDO / "results/errors_so762_train.csv", index_label="utt_id")
     Y = {a: train[a].to_numpy(float) for a in ASPECTS}
     samples = cluster_resamples(train.spk.to_numpy())
     listeners = sorted(E.columns)

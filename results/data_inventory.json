@@ -1,0 +1,1855 @@
+{
+  "rule": "03_design_protocol.md section 2",
+  "corpora": {
+    "so762": {
+      "configurations": {
+        "allosaurus-eng": {
+          "files": [
+            "results/hyp_allosaurus-eng.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 3,
+          "sha256": [
+            "4e07d6932fea2b43f06312e7aa384c2b49e23a6b0139f41c8af6865a88893a01"
+          ],
+          "family": "phone-recognizer",
+          "output_unit": "phones",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "atc-w2v2": {
+          "files": [
+            "results/hyp_atc-w2v2.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 4,
+          "sha256": [
+            "2b1a63b7a89510af06dbd9e815e3dd7ada6e67234420c73de3a42b49ff87acae"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "atc-xlsr": {
+          "files": [
+            "results/hyp_atc-xlsr.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 2,
+          "sha256": [
+            "aaff479802b202237d7178d90f40e16fca86ea9f4182ccf21c1ed84e51172518"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "base.en": {
+          "files": [
+            "results/hyp_base.en.jsonl",
+            "results/train_hyp_base.en.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 2,
+          "sha256": [
+            "5ca438c1001dab9d19b19e5cef83375fe57f26e4eaa637d4166a91094d1a1239",
+            "0f4adcf9a45f1a6b2c2affc43c4d3405828f2b9220a426e6ef3926a02b87bdc0"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "base.en@snr10": {
+          "files": [
+            "results/hyp_base.en@snr10.jsonl"
+          ],
+          "rows": 2500,
+          "empty": 1,
+          "sha256": [
+            "20496fa0cecc9fdc463dd4cd659644598e782f6356c52fb4765cf0f0d8c19b4b"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "artificially degraded input (rule 3)"
+        },
+        "canary-1b": {
+          "files": [
+            "results/hyp_canary-1b.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "3c85b0289373258dafcb944295c710aed69950318eb2cba767f61ccc88e50d97"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "crisperwhisper": {
+          "files": [
+            "results/hyp_crisperwhisper.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "0395a8c305349c8e882237df34ad46277202d805250e000ffb622e7b8301efdc"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "distil-large-v3": {
+          "files": [
+            "results/hyp_distil-large-v3.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "f698aeabf459deb8bc9d17e3a40d9a74766a24b35ffda526cd6f279653c7d763"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "distil-small.en": {
+          "files": [
+            "results/hyp_distil-small.en.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "7e9d27cfc7c5ac99e60aa0ac8d44f85cb51b47408c56cf81fe25e841c2b971bb"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "espeak-phone": {
+          "files": [
+            "results/hyp_espeak-phone.jsonl",
+            "results/train_hyp_espeak-phone.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "02baaab1d8c9c3259c9650a3cce873b3aec007f2e78c6b0dbc2147625fe34ef3",
+            "14daca027646ef713d0e22b3b1b0a7681499ba5daab48a9ea0c8d69c9999920b"
+          ],
+          "family": "phone-recognizer",
+          "output_unit": "phones",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "hubert-large": {
+          "files": [
+            "results/hyp_hubert-large.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 1,
+          "sha256": [
+            "0f40a40e8d1335350176a96795dab7e4139e09959cc05862408982b134f94800"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "jasper": {
+          "files": [
+            "results/hyp_jasper.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 3,
+          "sha256": [
+            "1e2da75a163f2dfc8489a8a2fae4e8213b8d696f69de7a23bfe72ef4bf01c2d6"
+          ],
+          "family": "conv-ctc",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "moonshine-base": {
+          "files": [
+            "results/hyp_moonshine-base.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 386,
+          "sha256": [
+            "c68c92eeef45506b37efe1e4084dc1eb53bc20ac480b620120417d468ca07f58"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "parakeet": {
+          "files": [
+            "results/hyp_parakeet.jsonl",
+            "results/train_hyp_parakeet.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 3,
+          "sha256": [
+            "6f2a4949c467845fcb0edcd7291fa6642bfc8e4a874108ea82db9835eefd3b0a",
+            "b6cb558ad7062b0cacd6184083e0f20700454fbc2ed5b90d95314c8fe5ffb100"
+          ],
+          "family": "transducer",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "parakeet@snr10": {
+          "files": [
+            "results/hyp_parakeet@snr10.jsonl"
+          ],
+          "rows": 2500,
+          "empty": 4,
+          "sha256": [
+            "87954758e517aaa694af5fc214e5da410d9760c9447a43411519a8c47ea827e3"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "artificially degraded input (rule 3)"
+        },
+        "quartznet": {
+          "files": [
+            "results/hyp_quartznet.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 3,
+          "sha256": [
+            "845b595d88fc092520dcc5b7020b62f43a0033e4a6795ee3385774d9d2135e91"
+          ],
+          "family": "conv-ctc",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "qwen2audio": {
+          "files": [
+            "results/hyp_qwen2audio.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "db2bda781edaf1a5c970203eafb3986eacdbf11a926b887eaa31e70d896f19de"
+          ],
+          "family": "speech-llm",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "seamless-m4t-v2": {
+          "files": [
+            "results/hyp_seamless-m4t-v2.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "40e1ae2f07c3411d1d7f04c3b4dd69656182217c14ab015092c2a466f931b301"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "small.en": {
+          "files": [
+            "results/hyp_small.en.jsonl",
+            "results/train_hyp_small.en.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 2,
+          "sha256": [
+            "7420182cb733a9c670011f28bc526c1edbeacf72321060146f5c564fc9c00659",
+            "406d444ca3e991a6e09bef8022dd2c4e2b623ff0842bcaa8bcad5dc7b0076334"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "sphinx-enus": {
+          "files": [
+            "results/hyp_sphinx-enus.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 2,
+          "sha256": [
+            "6bdfc306ddd4d31be9cbf62889057d65e445cc27b8780c94f37e78a58aab33dd"
+          ],
+          "family": "gmm-hmm",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "tiny.en": {
+          "files": [
+            "results/hyp_tiny.en.jsonl",
+            "results/train_hyp_tiny.en.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 2,
+          "sha256": [
+            "e0f4eac0eb47eb7c9053ae8ac1a6244d8f65f1904f58da86a83b4c090d28346e",
+            "cb37c155febd17998b463179ff57f51747b5f983e4b7f40be204b119a3660453"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "tiny": {
+          "files": [
+            "results/hyp_tiny.jsonl",
+            "results/train_hyp_tiny.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 1,
+          "sha256": [
+            "07258325b3cc78f05b4e68172940b36176c54e25ee6c1fad403e9b2817f750aa",
+            "ed7f7420d95ad2e5e765c168c6c5c18bace7e4425b3c690bc9c3cf57f3c8de57"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "vosk-small": {
+          "files": [
+            "results/hyp_vosk-small.jsonl",
+            "results/train_hyp_vosk-small.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 5,
+          "sha256": [
+            "ee2c74e89a2dd20a041fa9484be27b19c0be483b056283a6fa3e591b42d81fa1",
+            "4421e1ce1ca84d0f742495317b5b778473c160a9e884932833ac5af0092454c9"
+          ],
+          "family": "kaldi-hybrid",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-large-lv60": {
+          "files": [
+            "results/hyp_w2v2-large-lv60.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 2,
+          "sha256": [
+            "6c8c1c14fed764ebe605bff4cd7cec3166d735caec2d83a3edeb54de3b3608e4"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-swbd": {
+          "files": [
+            "results/hyp_w2v2-swbd.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 1,
+          "sha256": [
+            "755589b0c91e2f27d65547536d550aad88949157e78faae659c96b50ca1599dd"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-xlsr-cv": {
+          "files": [
+            "results/hyp_w2v2-xlsr-cv.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 1,
+          "sha256": [
+            "332787470e32f16c0f45ff19e4aff5c8f518bae9a64ce658cce5eedc6713214c"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2lm_a0.5": {
+          "files": [
+            "results/hyp_w2v2lm_a0.5.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "c81b41a2f9a10484828926c1c17bc7a0254e5cc3559945ad91fede7a104668ed"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "decoder variant of wav2vec2-base (rule 2)"
+        },
+        "w2v2lm_a1.0": {
+          "files": [
+            "results/hyp_w2v2lm_a1.0.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "0760f4874eac0c7f9a4682e419493b59183d7cdca9ec142278715c08c083af01"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "decoder variant of wav2vec2-base (rule 2)"
+        },
+        "w2v2lm_a2.0": {
+          "files": [
+            "results/hyp_w2v2lm_a2.0.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "e4a6a59dc5e968f3c02f5132eb1d60ecbbf0bdb70a69f5ccefead702f1cb400b"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "decoder variant of wav2vec2-base (rule 2)"
+        },
+        "wav2vec2-base": {
+          "files": [
+            "results/hyp_wav2vec2-base.jsonl",
+            "results/train_hyp_wav2vec2-base.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "10c812b548bf201651efcf36c6a4da7835e83d0a1e164c6fbdbaafbc4e205714",
+            "fe2df8e9109f0c00c76e3b0b1cc109f49306dc7372db5eb4f9202762e29893c8"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "wav2vec2-robust": {
+          "files": [
+            "results/hyp_wav2vec2-robust.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "07919a326cbf53b2132d3beb4bba4b66ea96c5820c2a7df645c1374453904a39"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "wavlm-large": {
+          "files": [
+            "results/hyp_wavlm-large.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 1,
+          "sha256": [
+            "cabe48388cb9491fc9b7f379a81475e44c8575bc12bac1aa57b601df8057d486"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "xlsr-1b-cv": {
+          "files": [
+            "results/hyp_xlsr-1b-cv.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 0,
+          "sha256": [
+            "250cee3f45e7d9e56252bb4142d6c52dccab19b98979a1b812b1e321336949b5"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "xlsr-cv-en": {
+          "files": [
+            "results/hyp_xlsr-cv-en.jsonl"
+          ],
+          "rows": 5000,
+          "empty": 1,
+          "sha256": [
+            "e518b5359d5b8859885bca757e7f5cfff1283c166b303a14c1e1bafcd48e3f99"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "checkpoint identity not established in the inventory (rule 4)"
+        }
+      },
+      "admitted": [
+        "allosaurus-eng",
+        "atc-w2v2",
+        "atc-xlsr",
+        "base.en",
+        "canary-1b",
+        "crisperwhisper",
+        "distil-large-v3",
+        "distil-small.en",
+        "espeak-phone",
+        "hubert-large",
+        "jasper",
+        "moonshine-base",
+        "parakeet",
+        "quartznet",
+        "qwen2audio",
+        "seamless-m4t-v2",
+        "small.en",
+        "sphinx-enus",
+        "tiny",
+        "tiny.en",
+        "vosk-small",
+        "w2v2-large-lv60",
+        "w2v2-swbd",
+        "w2v2-xlsr-cv",
+        "wav2vec2-base",
+        "wav2vec2-robust",
+        "wavlm-large",
+        "xlsr-1b-cv"
+      ],
+      "n_admitted": 28
+    },
+    "allsstar": {
+      "configurations": {
+        "allosaurus-eng": {
+          "files": [
+            "results/allsstar2_hyp_allosaurus-eng.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 2,
+          "sha256": [
+            "78f6300ac3f69ef499831277de11aa28f654c4b2cb61e852f3b47f670df05e3c"
+          ],
+          "family": "phone-recognizer",
+          "output_unit": "phones",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "atc-w2v2": {
+          "files": [
+            "results/allsstar2_hyp_atc-w2v2.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "3edbaa5155c93c5272ed60a52e3ee74e41882edfc12a40c94260fb515314b756"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "atc-xlsr": {
+          "files": [
+            "results/allsstar2_hyp_atc-xlsr.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "c9dc5f50f875825307dbba3270ab9d491e6d3851c12cf1f9ce4e7a6a3deb1dca"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "base.en": {
+          "files": [
+            "results/allsstar2_hyp_base.en.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "e3278864e059a2a3b186f9383c838c1eff2c2c98eb3011426162391d366e72f7"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "canary-1b": {
+          "files": [
+            "results/allsstar2_hyp_canary-1b.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "57f21448534511cbead49acf4581d213853634edde1491dd446a93c2e473bcdc"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "crisperwhisper": {
+          "files": [
+            "results/allsstar2_hyp_crisperwhisper.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "976eb1cb42b2981ac492189d1c4eb0feffd160d6848f3bf65516731b6a94d260"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "distil-large-v3": {
+          "files": [
+            "results/allsstar2_hyp_distil-large-v3.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "bd9966cca020592f800e0e8911b1f268be9c8d440370b4a56b9c82384aa84883"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "distil-small.en": {
+          "files": [
+            "results/allsstar2_hyp_distil-small.en.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "e8abbf6466aa8ffa4cebd34cd1bf91270c5e4a3a05b543c88358a81938081db1"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "espeak-phone": {
+          "files": [
+            "results/allsstar2_hyp_espeak-phone.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "9887552267967127ea1e84f6862bea063dd4b5fef82cf418b67a1dafc10d0324"
+          ],
+          "family": "phone-recognizer",
+          "output_unit": "phones",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "hubert-large": {
+          "files": [
+            "results/allsstar2_hyp_hubert-large.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "06b908f55ec965dcbaeb27f43d097a1cc5263e84909434e117e4d10d74d80b56"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "jasper": {
+          "files": [
+            "results/allsstar2_hyp_jasper.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "d3f0264669607e507fdf9626085e8b1580790dd6de4887a8fe7b07912ec6355c"
+          ],
+          "family": "conv-ctc",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "moonshine-base": {
+          "files": [
+            "results/allsstar2_hyp_moonshine-base.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "f2764a38efa69146beb3515f259e967c35b6da9d170bc052fe2faa33268b4de7"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "parakeet-tdt-0.6b": {
+          "files": [
+            "results/allsstar2_hyp_parakeet-tdt-0.6b.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "d2fc7576fabc856a5e086583f831254ef7ecd7f5e8dcbf8b4cdb190e327b5431"
+          ],
+          "family": "transducer",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "quartznet": {
+          "files": [
+            "results/allsstar2_hyp_quartznet.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "62c9331606eed17d314a49de8893998790efc42a7f825214684bab327f2f41f0"
+          ],
+          "family": "conv-ctc",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "qwen2audio": {
+          "files": [
+            "results/allsstar2_hyp_qwen2audio.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "7958fd2962f354f0ccd00d668c6dad0ee9ff5639fcff9fcd29ece3b1c00f05f1"
+          ],
+          "family": "speech-llm",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "seamless-m4t-v2": {
+          "files": [
+            "results/allsstar2_hyp_seamless-m4t-v2.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "62d3bc0428e55e7934b6482916dededf78c1bb2f7a08e49ecf286b479c504bb3"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "small.en": {
+          "files": [
+            "results/allsstar2_hyp_small.en.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "2b6b5fe1bc194b7d09688184823c9c08d240ce43da457ca9e3cb507f324c4c6b"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "sphinx-enus": {
+          "files": [
+            "results/allsstar2_hyp_sphinx-enus.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "76ed882ed4994b7fb8a44aab4a9c41e3b877480a67428155c84f02d22021566f"
+          ],
+          "family": "gmm-hmm",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "tiny.en": {
+          "files": [
+            "results/allsstar2_hyp_tiny.en.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "c8ec0c6f2fbb270266beaac3337e15ea12c3dd0d1c1154e50835281dcd1f25df"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "tiny": {
+          "files": [
+            "results/allsstar2_hyp_tiny.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "b9428c072fe3a6f5720b963a7bfaf5bb42d65e31ce5beee4f11597bc4578a77c"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "vosk-small": {
+          "files": [
+            "results/allsstar2_hyp_vosk-small.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "3cdb0ba6053a9ae8535575b25da3e28072e5aff051df0e0ed47b9623081bf10b"
+          ],
+          "family": "kaldi-hybrid",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-large-lv60": {
+          "files": [
+            "results/allsstar2_hyp_w2v2-large-lv60.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "89f6aa5ee789ca6e1f7f0209eb1b378276542519c92a9191df07b163fd62b203"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-swbd": {
+          "files": [
+            "results/allsstar2_hyp_w2v2-swbd.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "3a4cb27f9db71a4499ca5b3140fabee461b3af7e3dd260cd0dbf8ad88f7fbb9b"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-xlsr-cv": {
+          "files": [
+            "results/allsstar2_hyp_w2v2-xlsr-cv.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "809eeb15ffdf6532ab3db72f26a77c98733ea743af5e0cdc5eea54e5317d43fe"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2lm@a2.0": {
+          "files": [
+            "results/allsstar2_hyp_w2v2lm@a2.0.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "102412fbadf04ab9e0b567587e7b036ca925355f4701ec20ee354ec7b862d1f7"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "decoder variant of wav2vec2-base (rule 2)"
+        },
+        "wav2vec2-base": {
+          "files": [
+            "results/allsstar2_hyp_wav2vec2-base.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "d86f5b5fe33d1db42619d713115dc718e46d967871dcc4268ba3fe0e18ae4773"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "wav2vec2-robust": {
+          "files": [
+            "results/allsstar2_hyp_wav2vec2-robust.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "da6c4b2b67e9e3344fb4e74bfe6ea8137bba5f17d04d62cb7ea5a3b9b5eaf694"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "wavlm-large": {
+          "files": [
+            "results/allsstar2_hyp_wavlm-large.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "43cb8d6f462d753d44a66171bca3e3d3573fab28363598b32e0e246bfaee8a28"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "xlsr-1b-cv": {
+          "files": [
+            "results/allsstar2_hyp_xlsr-1b-cv.jsonl"
+          ],
+          "rows": 1500,
+          "empty": 0,
+          "sha256": [
+            "4b1480f8c2979409110ad2a9eedc06be9a128063694cf3d17e1af3609c8ce959"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        }
+      },
+      "admitted": [
+        "allosaurus-eng",
+        "atc-w2v2",
+        "atc-xlsr",
+        "base.en",
+        "canary-1b",
+        "crisperwhisper",
+        "distil-large-v3",
+        "distil-small.en",
+        "espeak-phone",
+        "hubert-large",
+        "jasper",
+        "moonshine-base",
+        "parakeet-tdt-0.6b",
+        "quartznet",
+        "qwen2audio",
+        "seamless-m4t-v2",
+        "small.en",
+        "sphinx-enus",
+        "tiny",
+        "tiny.en",
+        "vosk-small",
+        "w2v2-large-lv60",
+        "w2v2-swbd",
+        "w2v2-xlsr-cv",
+        "wav2vec2-base",
+        "wav2vec2-robust",
+        "wavlm-large",
+        "xlsr-1b-cv"
+      ],
+      "n_admitted": 28
+    },
+    "epadb": {
+      "configurations": {
+        "allosaurus-eng": {
+          "files": [
+            "results/epadb_hyp_allosaurus-eng.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "804a702cf4cf2735947eec13b696e3f1eee27bfa336c5b72b75d222369c05377"
+          ],
+          "family": "phone-recognizer",
+          "output_unit": "phones",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "base.en": {
+          "files": [
+            "results/epadb_hyp_base.en.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "62d305524ccd4ac73797ba9f1a6cd5cff510ceb09d14a7f1013d28776e14ef2a"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "espeak-phone": {
+          "files": [
+            "results/epadb_hyp_espeak-phone.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "773aaaa895995c5e52dcc0ae2e30aeb6c6ed3fb805d501bbd9d900003e921580"
+          ],
+          "family": "phone-recognizer",
+          "output_unit": "phones",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "parakeet": {
+          "files": [
+            "results/epadb_hyp_parakeet.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "24bf27ad5154de5b38e5dc1ef0daa1fcf5e01aa127cfe5eabd00b8f7c83e65e0"
+          ],
+          "family": "transducer",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "small.en": {
+          "files": [
+            "results/epadb_hyp_small.en.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "084a8b5bda44e7e5ca53d37ee9fd117c4549965ec89dd1f0e8d4e6fadc53fde0"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "sphinx-enus": {
+          "files": [
+            "results/epadb_hyp_sphinx-enus.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "e2f0bb26d78151ab7713aa775614d2d84c39d526b4592fc12d1e75d0460b36eb"
+          ],
+          "family": "gmm-hmm",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "tiny.en": {
+          "files": [
+            "results/epadb_hyp_tiny.en.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "e1a5c89a1733831dccc21d2723807f072d9485d5886c3b4e080ff59fecf21b8d"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "tiny": {
+          "files": [
+            "results/epadb_hyp_tiny.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "7c161f6e64c012d67c209330a161437a7ce7f62c0948252c0690c975754b87a0"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "vosk-small": {
+          "files": [
+            "results/epadb_hyp_vosk-small.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "8f6585f5cfb7bff0946a63135bc78a311e5289256e59bbc5f8d6650fb928e1bc"
+          ],
+          "family": "kaldi-hybrid",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2lm_a2.0": {
+          "files": [
+            "results/epadb_hyp_w2v2lm_a2.0.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "d3ad731eb56434ecc68fcdfa3bf6b61901d57e9faaf214dc085016ae135b2a19"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "decoder variant of wav2vec2-base (rule 2)"
+        },
+        "wav2vec2-base": {
+          "files": [
+            "results/epadb_hyp_wav2vec2-base.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "8a0667104d4074ebe55756d2b8c5fc0f1a10c7a8b0c30b953bcfa3c4e5767d7b"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "atc-w2v2": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_atc-w2v2.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 1,
+          "sha256": [
+            "4fc860de65839d161633ca9d1e5a2ddf36e32a8f8175c99f23b54ea4acd1de73"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "atc-xlsr": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_atc-xlsr.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "02699be05288a2af6aa5e88d285797eb3e59cc031c955d72b036fa5015852a89"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "canary-1b": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_canary-1b.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "b525c8aca9d39f298ac064bdd7bd5c10dbd65c0fab996cae88473680d36cf213"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "crisperwhisper": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_crisperwhisper.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "6e46843e6ca52093154b7523623fb121c4b472ed57ac3c47590f157d628ff475"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "distil-large-v3": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_distil-large-v3.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "f8e25ba0bda910dedb326bbcf41863cad91bd09c798723973af33e17d1265b4a"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "distil-small.en": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_distil-small.en.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "e6cdad91efb06bd4bc09d1502fc4335e7b6009464602f3874586cb7135d6c0f3"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "hubert-large": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_hubert-large.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "d0bed9a541022fe82e0c520fdc36917f25ed5f8e524fca603bcfd2b1173dfc12"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "jasper": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_jasper.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "e2d171210ba83f5fae35b76161ac1703b945eaadc615939c11a129a3972278d2"
+          ],
+          "family": "conv-ctc",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "moonshine-base": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_moonshine-base.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 76,
+          "sha256": [
+            "7ce4f95924fba7e8a02aee833d3d265befd6c073c63d75c01a6c90af0a01ed21"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "quartznet": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_quartznet.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "c3f2db510e60d8b52a364d211b085691b6b1c9a99c9c64d8633661b8cb142634"
+          ],
+          "family": "conv-ctc",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "qwen2audio": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_qwen2audio.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "c56d06c38ff91ec7821e853b3bd09dc592ed3fa8e7acb71d778438282ef0a447"
+          ],
+          "family": "speech-llm",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "seamless-m4t-v2": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_seamless-m4t-v2.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "64e1d516f36d9af845946fb84528a6512a6b460913b1cfcf41f22be1fdc1d6ad"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-large-lv60": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_w2v2-large-lv60.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "00f493699036a17326c164d8c919b417ed5b5cdc0074c084481d445a9a164edc"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-swbd": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_w2v2-swbd.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "aebf29d97fcec75e543ec8d803cf89c8475888005a4e5684ea7fccb513146e47"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-xlsr-cv": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_w2v2-xlsr-cv.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "4da79c06d13bb963004cc5b74ac53ffb59f3a0651eeb135b526f5b7948972775"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "wav2vec2-robust": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_wav2vec2-robust.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "9d4c0cbbadcdcef80e5fe36bb1dd50455408c5639587be71f518ade27c3f0421"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "wavlm-large": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_wavlm-large.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "84165aa617ed9fecc9eeb3f6730dd2e396aea6f538c10b6fae50ff2706dd161a"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "xlsr-1b-cv": {
+          "files": [
+            "results/icassp2027/external29/epadb_hyp_xlsr-1b-cv.jsonl"
+          ],
+          "rows": 3160,
+          "empty": 0,
+          "sha256": [
+            "c5f980de19020bac679cceaa628851eacc0c6922b897d3a2b7a8035b29181ab6"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        }
+      },
+      "admitted": [
+        "allosaurus-eng",
+        "atc-w2v2",
+        "atc-xlsr",
+        "base.en",
+        "canary-1b",
+        "crisperwhisper",
+        "distil-large-v3",
+        "distil-small.en",
+        "espeak-phone",
+        "hubert-large",
+        "jasper",
+        "moonshine-base",
+        "parakeet",
+        "quartznet",
+        "qwen2audio",
+        "seamless-m4t-v2",
+        "small.en",
+        "sphinx-enus",
+        "tiny",
+        "tiny.en",
+        "vosk-small",
+        "w2v2-large-lv60",
+        "w2v2-swbd",
+        "w2v2-xlsr-cv",
+        "wav2vec2-base",
+        "wav2vec2-robust",
+        "wavlm-large",
+        "xlsr-1b-cv"
+      ],
+      "n_admitted": 28
+    },
+    "erj": {
+      "configurations": {
+        "allosaurus-eng": {
+          "files": [
+            "results/erj_hyp_allosaurus-eng.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "2879fe041daed2b8c627ee6f5a2698bbdb684433e10f9c0706c846772c3684f1"
+          ],
+          "family": "phone-recognizer",
+          "output_unit": "phones",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "base.en": {
+          "files": [
+            "results/erj_hyp_base.en.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "69f005438f3f5816aa2dca5e9f8527e16bce0c4624c9f06c35e05cd7cc8c22f6"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "espeak-phone": {
+          "files": [
+            "results/erj_hyp_espeak-phone.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "c032fc730b1cd057698a309514fa87d821e81786f9c9620306282b349e80f8f3"
+          ],
+          "family": "phone-recognizer",
+          "output_unit": "phones",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "parakeet": {
+          "files": [
+            "results/erj_hyp_parakeet.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "a74582f29cab6d71bec9553f3efac4c1b1379574d3e13fbcfb92ace89a239ceb"
+          ],
+          "family": "transducer",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "small.en": {
+          "files": [
+            "results/erj_hyp_small.en.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "a722c70e79390b4140ba35620fb7824a0033ce955f1cb09601c2d5bef233b3e4"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "sphinx-enus": {
+          "files": [
+            "results/erj_hyp_sphinx-enus.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "a313ed4ac4c2a9646394859bf4e46ec4b5c63d6eba4fd478bec873087cb37ebb"
+          ],
+          "family": "gmm-hmm",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "tiny.en": {
+          "files": [
+            "results/erj_hyp_tiny.en.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "079ed90ee17065099d0ed09c8e367f15a40347332de07057cfffd7112d641d53"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "tiny": {
+          "files": [
+            "results/erj_hyp_tiny.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "6d31ee608536448c4e8d3ecaf01a51a10f6a78b723d84272023d6b1b92ebe16b"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "vosk-small": {
+          "files": [
+            "results/erj_hyp_vosk-small.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "91b9c2dc4524c09e9c3abbf4475f2bb05c9b7324a57747d6ee9d71f372bd522f"
+          ],
+          "family": "kaldi-hybrid",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2lm_a2.0": {
+          "files": [
+            "results/erj_hyp_w2v2lm_a2.0.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "fe41ae68f34153418373ed6f04d22f887d3e059ebec90bb528fc88ee4c7d34da"
+          ],
+          "family": "unassigned",
+          "output_unit": "words",
+          "admitted": false,
+          "exclusion_reason": "decoder variant of wav2vec2-base (rule 2)"
+        },
+        "wav2vec2-base": {
+          "files": [
+            "results/erj_hyp_wav2vec2-base.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "ca3f4605e5e5277562f45d6c538943dc0c116951996fa60537ef2ad825400939"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "atc-w2v2": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_atc-w2v2.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "0cd4f5c90a43be37bc3a81897396291690eb877804ce1dd50ab534991eecf543"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "atc-xlsr": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_atc-xlsr.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "83dc8030492fcd4d5a3b635ff38207480963fe78111c242b01a5ccc70acfe732"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "canary-1b": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_canary-1b.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "bb5fa2d8ef73fcd5deb0b054af6f9ef8c14cf45d1e47b0e7d5f79a683d5b8eab"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "crisperwhisper": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_crisperwhisper.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "58fa020aa7918aeb93cd87532d54f0c33055cfcaf132a4033acf71615f4ee204"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "distil-large-v3": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_distil-large-v3.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "cfadf5a3454ad63cdcbdec1ab5c468c399aa6fedb3bd94a0f6572c2fdd49ad14"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "distil-small.en": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_distil-small.en.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "6e8835b4e68870137317cb18d5f84fa3f08726ab00946d4592f07d9353b13c10"
+          ],
+          "family": "whisper",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "hubert-large": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_hubert-large.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "dc309d110c7d7ea460253f616748aa3385e42595f2fb3668ba9ae980a1c2cc8e"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "jasper": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_jasper.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "ea87da8ee1c64d8b371c1cfe832c7ec645bade3abbd37fc1ebecd5508f9a79e9"
+          ],
+          "family": "conv-ctc",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "moonshine-base": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_moonshine-base.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 16,
+          "sha256": [
+            "0d9c7fab9e3522ebfbb70103e522ba3487f278f52a8d883629ad3d445d06a9e5"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "quartznet": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_quartznet.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "fc65958f28ba538b3f3e4d9a9ca468c50bc6003337fd9984601c1e41cdc52035"
+          ],
+          "family": "conv-ctc",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "qwen2audio": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_qwen2audio.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "f86c5a3df12899e7035f7cb94eb1744f602348a90155e9491ecac62fc9f1dbc9"
+          ],
+          "family": "speech-llm",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "seamless-m4t-v2": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_seamless-m4t-v2.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "faeeba54de5c5f9215a825654bfce27051d705323a1d2ac2c346c34db4051e79"
+          ],
+          "family": "other-enc-dec",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-large-lv60": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_w2v2-large-lv60.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "8f2cf93cf23f7d9cddf9c8e7bc1e8409f01b9bd3fce80f99d926d49c54f298e4"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-swbd": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_w2v2-swbd.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "bb0a4e59c314928ce659d971b6c2ace8d02cccd4b2e25f11b351d565bd4d8552"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "w2v2-xlsr-cv": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_w2v2-xlsr-cv.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "2b56b29678cfe28df56fc356eaf614452cb2ee7e3fef1d16a16d49ffb8faa647"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "wav2vec2-robust": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_wav2vec2-robust.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "268224a3021fd4878608cc0a5767347f7a6c29395c497544a66b3ef92b8b40c6"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "wavlm-large": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_wavlm-large.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "059b673cf0958119c4ecbda01e52f5eb3831d185eb175ed1938f21aa6b9f383b"
+          ],
+          "family": "ssl-ctc-librispeech",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        },
+        "xlsr-1b-cv": {
+          "files": [
+            "results/icassp2027/external29/erj_hyp_xlsr-1b-cv.jsonl"
+          ],
+          "rows": 3800,
+          "empty": 0,
+          "sha256": [
+            "44a90ed2c83c626d73e6741221efa52433dadd395f52911529f550a83a665b12"
+          ],
+          "family": "ssl-ctc-other-domain",
+          "output_unit": "words",
+          "admitted": true,
+          "exclusion_reason": null
+        }
+      },
+      "admitted": [
+        "allosaurus-eng",
+        "atc-w2v2",
+        "atc-xlsr",
+        "base.en",
+        "canary-1b",
+        "crisperwhisper",
+        "distil-large-v3",
+        "distil-small.en",
+        "espeak-phone",
+        "hubert-large",
+        "jasper",
+        "moonshine-base",
+        "parakeet",
+        "quartznet",
+        "qwen2audio",
+        "seamless-m4t-v2",
+        "small.en",
+        "sphinx-enus",
+        "tiny",
+        "tiny.en",
+        "vosk-small",
+        "w2v2-large-lv60",
+        "w2v2-swbd",
+        "w2v2-xlsr-cv",
+        "wav2vec2-base",
+        "wav2vec2-robust",
+        "wavlm-large",
+        "xlsr-1b-cv"
+      ],
+      "n_admitted": 28
+    }
+  }
+}

@@ -15,7 +15,10 @@
 | `04_preregistration_confirmatory.md` | 確認段階の事前登録テンプレート（開封前に記入・コミットする） |
 | `05_workplan.md` | 段階と関門 |
 | `06_stage1_dev_report.md` | 開発段階（SO762 train split のみ）の実行結果（`pipeline/stage1_dev.py` が生成） |
-| `pipeline/` | 既存コードに依存しない最小実装 |
+| `07_confirmatory_report.md` | 確認段階（SO762 test・ERJ・EpaDB・ALLSSTAR・OMPAL）の記録 |
+| `08_comparison.md` | 旧原稿との比較 |
+| `paper/` | 新原稿（`make_numbers.py` → `numbers.tex`、`build.py` → `output/pal_redo.pdf`） |
+| `pipeline/` | 既存コードに依存しない最小実装（`confirm.py` が確認段階） |
 | `results/` | 生成物（JSON） |
 
 実行：

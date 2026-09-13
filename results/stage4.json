@@ -1,0 +1,57 @@
+{
+  "data": "EpaDB",
+  "n": 3160,
+  "speakers": 50,
+  "empty": {
+    "allosaurus-eng": 0,
+    "atc-w2v2": 1,
+    "atc-xlsr": 0,
+    "base.en": 0,
+    "canary-1b": 0,
+    "crisperwhisper": 0,
+    "distil-large-v3": 0,
+    "distil-small.en": 0,
+    "espeak-phone": 0,
+    "hubert-large": 0,
+    "jasper": 0,
+    "moonshine-base": 76,
+    "parakeet": 0,
+    "quartznet": 0,
+    "qwen2audio": 0,
+    "seamless-m4t-v2": 0,
+    "small.en": 0,
+    "sphinx-enus": 0,
+    "tiny": 0,
+    "tiny.en": 0,
+    "vosk-small": 0,
+    "w2v2-large-lv60": 0,
+    "w2v2-swbd": 0,
+    "w2v2-xlsr-cv": 0,
+    "wav2vec2-base": 0,
+    "wav2vec2-robust": 0,
+    "wavlm-large": 0,
+    "xlsr-1b-cv": 0
+  },
+  "criterion": "annotator-1 phrase score",
+  "primary_H1_panel_r": {
+    "r": 0.41488752378750754,
+    "ci95": [
+      0.30066736175690734,
+      0.49051592328904614
+    ]
+  },
+  "panel_minus_hubert": {
+    "r_a": 0.41488752378750754,
+    "r_b": 0.30062726180882415,
+    "delta": 0.11426026197868339,
+    "delta_ci95": [
+      0.0770912124353386,
+      0.15204292084116572
+    ],
+    "p_delta_positive": 1.0
+  },
+  "speaker_level_r": 0.6946115073244629,
+  "stage": 4,
+  "seed": 20260913,
+  "bootstraps": 2000
+}

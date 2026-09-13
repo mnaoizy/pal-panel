@@ -1,0 +1,74 @@
+{
+  "data": "OMPAL (re-decoded transcripts of all 8 Mandarin listeners)",
+  "n": 1768,
+  "speakers": 46,
+  "listeners": [
+    "paraformer-zh",
+    "sense-voice",
+    "vosk-cn",
+    "wav2vec2-zh",
+    "whisper-base",
+    "whisper-small",
+    "whisper-tiny",
+    "zipformer-zh-en"
+  ],
+  "tone_channel": {
+    "tone_r": {
+      "r": 0.38881457620401366,
+      "ci95": [
+        0.30810688707898254,
+        0.45904638182977064
+      ]
+    },
+    "consonant_r": 0.1924577326766361
+  },
+  "primary_H6_tone_minus_consonant": {
+    "delta": 0.19635684352737756,
+    "ci95": [
+      0.09864991894787557,
+      0.29326674378347023
+    ]
+  },
+  "base_channel": {
+    "tone_r": 0.25705044409252537,
+    "consonant_r": 0.2701043316563596
+  },
+  "char_channel": {
+    "tone_r": 0.36994671516835903,
+    "consonant_r": 0.24483901451452356
+  },
+  "tone_minus_base_on_tone": {
+    "r_a": 0.38881457620401366,
+    "r_b": 0.25705044409252537,
+    "delta": 0.1317641321114883,
+    "delta_ci95": [
+      0.08906985870762017,
+      0.17469194994116857
+    ],
+    "p_delta_positive": 1.0
+  },
+  "base_matched_tone": {
+    "n": 1768,
+    "tone_r": {
+      "r": 0.47508936142067804,
+      "ci95": [
+        0.4024228604973695,
+        0.5319418598610036
+      ]
+    },
+    "consonant_r": 0.11998716236808168,
+    "minus_full_tone_channel": {
+      "r_a": 0.47508936142067804,
+      "r_b": 0.38881457620401366,
+      "delta": 0.08627478521666437,
+      "delta_ci95": [
+        0.02822674136554989,
+        0.14278474404901673
+      ],
+      "p_delta_positive": 0.997
+    }
+  },
+  "stage": 6,
+  "seed": 20260913,
+  "bootstraps": 2000
+}

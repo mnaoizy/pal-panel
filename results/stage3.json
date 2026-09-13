@@ -1,0 +1,80 @@
+{
+  "data": "ERJ",
+  "n": {
+    "segmental": 1900,
+    "rhythm": 950,
+    "intonation": 950
+  },
+  "speakers": 190,
+  "empty": {
+    "allosaurus-eng": 0,
+    "atc-w2v2": 0,
+    "atc-xlsr": 0,
+    "base.en": 0,
+    "canary-1b": 0,
+    "crisperwhisper": 0,
+    "distil-large-v3": 0,
+    "distil-small.en": 0,
+    "espeak-phone": 0,
+    "hubert-large": 0,
+    "jasper": 0,
+    "moonshine-base": 16,
+    "parakeet": 0,
+    "quartznet": 0,
+    "qwen2audio": 0,
+    "seamless-m4t-v2": 0,
+    "small.en": 0,
+    "sphinx-enus": 0,
+    "tiny": 0,
+    "tiny.en": 0,
+    "vosk-small": 0,
+    "w2v2-large-lv60": 0,
+    "w2v2-swbd": 0,
+    "w2v2-xlsr-cv": 0,
+    "wav2vec2-base": 0,
+    "wav2vec2-robust": 0,
+    "wavlm-large": 0,
+    "xlsr-1b-cv": 0
+  },
+  "r": {
+    "segmental": {
+      "r": 0.5969543016005622,
+      "ci95": [
+        0.5579733661282509,
+        0.6316550330132581
+      ]
+    },
+    "rhythm": {
+      "r": 0.1567090471445398,
+      "ci95": [
+        0.07893059831586971,
+        0.23469378567520544
+      ]
+    },
+    "intonation": {
+      "r": 0.07290839163881375,
+      "ci95": [
+        0.0052440876554426434,
+        0.13892802738122692
+      ]
+    }
+  },
+  "primary_H4_seg_minus_rhythm": {
+    "delta": 0.44024525445602236,
+    "ci95": [
+      0.3661535888804616,
+      0.5161374129703851
+    ]
+  },
+  "seg_minus_intonation": {
+    "delta": 0.5240459099617484,
+    "ci95": [
+      0.45130418056175625,
+      0.5966348228138295
+    ]
+  },
+  "speaker_level_segmental_r": 0.7780047403476249,
+  "stage": 3,
+  "seed": 20260913,
+  "bootstraps": 2000
+}

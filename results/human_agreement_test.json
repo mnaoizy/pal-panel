@@ -1,0 +1,14 @@
+{
+  "accuracy": {
+    "mean_pairwise_r": 0.6177394806722456,
+    "mean_rater_vs_rest_r": 0.7316546872173187
+  },
+  "fluency": {
+    "mean_pairwise_r": 0.6651266056154608,
+    "mean_rater_vs_rest_r": 0.768296758480675
+  },
+  "total": {
+    "mean_pairwise_r": 0.6752387440596188,
+    "mean_rater_vs_rest_r": 0.7768231835525896
+  }
+}

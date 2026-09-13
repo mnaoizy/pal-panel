@@ -82,7 +82,7 @@ def cluster_resamples(groups, seed=SEED, reps=B) -> list[np.ndarray]:
 
 
 def ci(values) -> list[float]:
-    return [float(v) for v in np.percentile(values, [2.5, 97.5])]
+    return [float(v) for v in np.nanpercentile(values, [2.5, 97.5])]
 
 
 def corr_ci(score, target, samples) -> dict:

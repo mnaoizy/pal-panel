@@ -30,7 +30,7 @@ p1 <- ggplot(d, aes(error, r)) +
   theme(legend.position = "bottom", legend.text = element_text(size = 6.5), legend.key.size = unit(3, "mm"),
         legend.margin = margin(0, 0, 0, 0), axis.title = element_text(size = 8.5), axis.text = element_text(size = 7.5)) +
   guides(colour = guide_legend(ncol = 2), shape = guide_legend(ncol = 2))
-ggsave(file.path(root, "paper/figures/listeners.pdf"), p1, width = 3.45, height = 2.75, units = "in")
+ggsave(file.path(root, "paper/figures/listeners.pdf"), p1, width = 3.45, height = 2.75, units = "in", device = cairo_pdf)
 
 s5 <- fromJSON(file.path(root, "results/stage5.json"))
 raw <- read.csv("/Volumes/Untitled/Prj/gop/data/allsstar/L2_response_score.csv", stringsAsFactors = FALSE)
@@ -42,5 +42,5 @@ p2 <- ggplot(a, aes(score, human)) +
   geom_point(size = 1.6, shape = 21, fill = "white") +
   labs(x = "PAL score (mean −PER, 28 listeners)", y = "Human word recovery (%)") +
   theme(axis.title = element_text(size = 8.5), axis.text = element_text(size = 7.5))
-ggsave(file.path(root, "paper/figures/allsstar.pdf"), p2, width = 3.45, height = 1.85, units = "in")
+ggsave(file.path(root, "paper/figures/allsstar.pdf"), p2, width = 3.45, height = 1.85, units = "in", device = cairo_pdf)
 cat("figures written; r =", cor(a$score, a$human), "\n")

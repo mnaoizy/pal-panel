@@ -2,7 +2,7 @@
 Pronunciation assessment depends on expert-scored speech. PAL, a Panel of Artificial Listeners, measures how recoverable a known
 prompt is from a learner's reading with heterogeneous recognizers: each recognizer's phoneme error against the prompt is a
 measurement, and the equal-weight mean over \N{Panel} recognizers admitted
-by an a-priori rule is the readout. No panel weight or score parameter is
+by an a priori rule is the readout. No panel weight or score parameter is
 fitted to human ratings; ratings serve only development and validation.
 Design was fixed on the \so{} training split; five primary confirmatory comparisons were pre-specified and tested once
 after protocol commitment.
@@ -64,7 +64,9 @@ $h_k(u)$. Prompt and hypothesis pass through the same normalization
 spoken names) and the same \texttt{g2p\_en} conversion to stress-stripped
 ARPAbet. The phoneme error rate $e_k(u)\in[0,1]$ is the Levenshtein distance
 divided by the reference length, capped at one; an empty hypothesis scores
-one. Phone recognizers are compared directly with eSpeak reference phones,
+one. This transcript-derived PER compares canonical phone sequences of the
+recognized and prompted words, so it is a phone-weighted word distance,
+not a phone-level transcription of the learner's realization. Phone recognizers are compared directly with eSpeak reference phones,
 without inventory mapping. The readout is
 \begin{equation}
 p(u)=-\frac{1}{K}\sum_{k=1}^{K}e_k(u),
@@ -79,10 +81,10 @@ polyphonic characters are not modeled.
 
 \subsection{Panel rule}
 The candidate inventory is the set of recognizer configurations whose
-transcripts of these corpora existed before this study. It was assembled
-in earlier work that inspected \so{} correlations; the admission rule
-below does not, no candidate was added or removed for this study, and the
-excluded configurations are released with their reasons. Admission is decided before any result is seen:
+transcripts of these corpora existed before this study. It was assembled in earlier work that inspected \so{} correlations. The
+admission rule below does not use performance, no candidate was added or
+removed for this study, and the excluded configurations are released with
+their reasons. Admission is decided before any result is seen:
 openly downloadable weights; support for the target language or a universal phone inventory;
 one configuration per acoustic checkpoint, so decoder variants of an
 admitted checkpoint are excluded; no artificially degraded inputs; no
@@ -342,7 +344,8 @@ of pronunciation, contribute little variance. Third, aggregation
 matters more than curation: eight arbitrary listeners land within a few hundredths of the full panel, equal weights are not improved by medians or error-based weights, and
 family breadth helped on the development split but not on the external
 criterion. Random eight-listener subsets already captured most of the full-panel
-signal here; whether such smaller panels transfer equally was not tested.
+signal here, which bounds the inference cost of a practical panel; whether
+such smaller panels transfer equally was not tested.
 
 \section{Limitations and conclusion}
 \label{sec:conclusion}
@@ -364,10 +367,9 @@ lexical-tone recoverability, with each claim tested once under a
 pre-specified, committed protocol.
 
 \section{Compliance with Ethical Standards}
-This study reanalyses existing speech corpora obtained through their
-providers' access procedures. No participants were recruited, and no new
-recordings or human ratings were collected. No separate ethical review was
-obtained for this secondary analysis.
+This study reanalyses existing corpora obtained through their providers'
+procedures; no participants were recruited and no new recordings or ratings
+were collected.
 
 \section{Acknowledgments}
 No funding; the authors declare no conflicts of interest. OpenAI Codex and

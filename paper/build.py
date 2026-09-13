@@ -7,6 +7,11 @@ def run(cmd):
     r = subprocess.run(cmd, cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     if r.returncode: raise SystemExit(r.stdout[-4000:])
     return r.stdout
+import json, re
+used = set(re.findall(r"\\N\{(\w+)\}", (ROOT / "content.tex").read_text()))
+defined = set(json.loads((ROOT / "numbers.json").read_text()))
+missing = sorted(used - defined)
+if missing: raise SystemExit(f"undefined number macros: {missing} (run make_numbers.py)")
 if BUILD.exists(): shutil.rmtree(BUILD)
 BUILD.mkdir()
 latex = ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "-output-directory=build", "main.tex"]

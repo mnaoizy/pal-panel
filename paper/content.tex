@@ -71,8 +71,7 @@ p(u)=-\frac{1}{K}\sum_{k=1}^{K}e_k(u),
 \label{eq:panel}
 \end{equation}
 an equal-weight mean over the $K$ admitted listeners; larger $p(u)$ means
-greater recoverability. The scale is relative, so evaluation uses
-correlation. For Mandarin, characters are simplified and pinyin conversion
+greater recoverability. For Mandarin, characters are simplified and pinyin conversion
 yields separate syllable-base and tone sequences, giving character, base,
 and tone error channels. Tones are canonical lexical tones from pinyin
 conversion with the neutral tone as a fifth category; tone sandhi and
@@ -340,10 +339,9 @@ quality: the weakest third of the panel achieves a correlation similar to
 the best single recognizer, while the
 most accurate recognizers, which recover accented speech almost regardless
 of pronunciation, contribute little variance. Third, aggregation
-matters more than curation: eight arbitrary listeners land within a few hundredths of the full panel, equal weights are not improved by medians
-or error-based weights, and the one composition effect that reached
-significance on the development split, family breadth, did not reach it
-on the external criterion. Random eight-listener subsets already captured most of the full-panel
+matters more than curation: eight arbitrary listeners land within a few hundredths of the full panel, equal weights are not improved by medians or error-based weights, and
+family breadth helped on the development split but not on the external
+criterion. Random eight-listener subsets already captured most of the full-panel
 signal here; whether such smaller panels transfer equally was not tested.
 
 \section{Limitations and conclusion}
